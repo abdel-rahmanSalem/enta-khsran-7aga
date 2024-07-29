@@ -3,8 +3,8 @@
   "description": "Encourage people to take risks and do things they've always wanted but never did.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e293b",
-  "theme_color": "#1e293b",
+  "background_color": "#111827",
+  "theme_color": "#111827",
   "icons": [
     {
       "src": "/icons8-logo-ios-17-outlined-16.png",
