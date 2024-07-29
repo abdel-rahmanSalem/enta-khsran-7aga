@@ -5,7 +5,6 @@ function MaTgrbYaAkhy({ videoRef, isOpenVideo }) {
     >
       <video
         ref={videoRef}
-        width="270"
         autoPlay
         playsInline
         className="rounded-md shadow-lg"

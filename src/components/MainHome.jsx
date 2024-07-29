@@ -18,9 +18,9 @@ function MainHome() {
   }, [isOpenVideo]);
 
   return (
-    <>
+    <div className="flex w-full justify-center px-6">
       <div
-        className={`rounded-lg bg-slate-800 ${isOpenVideo ? "px-6 py-7" : "px-10 py-7"} shadow-md`}
+        className={`w-full max-w-3xl rounded-lg bg-slate-800 ${isOpenVideo ? "px-6 py-7" : "px-8 py-6"} shadow-md`}
       >
         <MaTgrbYaAkhy videoRef={videoRef} isOpenVideo={isOpenVideo} />
         {!isOpenVideo && (
@@ -32,7 +32,7 @@ function MainHome() {
         )}
       </div>
       {isOpenVideo && <CloseVideo setIsOpenVideo={setIsOpenVideo} />}
-    </>
+    </div>
   );
 }
 

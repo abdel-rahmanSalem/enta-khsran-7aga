@@ -9,11 +9,7 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return (
-    <div className="h-screen">
-      <RouterProvider router={router} fallbackElement={<Loader />} />
-    </div>
-  );
+  return <RouterProvider router={router} fallbackElement={<Loader />} />;
 }
 
 export default App;
