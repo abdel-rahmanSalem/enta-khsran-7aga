@@ -8,7 +8,6 @@ function AgrbWlaFaks({ isGrb, setIsGrb, setIsOpenVideo }) {
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4">
       <input
-        autoFocus
         dir="rtl"
         id="tgroba"
         type="text"
