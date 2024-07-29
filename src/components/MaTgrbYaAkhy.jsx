@@ -1,6 +1,8 @@
-function MaTgrbYaAkhy({ videoRef }) {
+function MaTgrbYaAkhy({ videoRef, isOpenVideo }) {
   return (
-    <div>
+    <div
+      className={`transition-opacity duration-500 ease-in-out ${isOpenVideo ? "opacity-100" : "hidden opacity-0"}`}
+    >
       <video
         ref={videoRef}
         width="270"
