@@ -1,7 +1,7 @@
 function MaTgrbYaAkhy({ videoRef, isOpenVideo }) {
   return (
     <div
-      className={`transition-opacity duration-500 ease-in-out ${isOpenVideo ? "opacity-100" : "hidden opacity-0"}`}
+      className={`transition-opacity duration-500 ${isOpenVideo ? "opacity-100" : "hidden opacity-0"}`}
     >
       <video
         ref={videoRef}

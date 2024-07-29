@@ -4,7 +4,7 @@ import MainHome from "../components/MainHome";
 
 function Home() {
   return (
-    <div className="flex h-screen items-center justify-center bg-gray-900 text-gray-200">
+    <div className="flex h-full items-center justify-center bg-gray-900 text-gray-200">
       <Logo />
       <MainHome />
       <Footer />

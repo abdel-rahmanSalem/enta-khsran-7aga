@@ -22,7 +22,7 @@ function MainHome() {
       <div
         className={`rounded-lg bg-slate-800 ${isOpenVideo ? "px-6 py-7" : "px-10 py-7"} shadow-md`}
       >
-        <MaTgrbYaAkhy videoRef={videoRef} />
+        <MaTgrbYaAkhy videoRef={videoRef} isOpenVideo={isOpenVideo} />
         {!isOpenVideo && (
           <AgrbWlaFaks
             isGrb={isGrb}
