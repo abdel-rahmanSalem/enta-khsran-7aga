@@ -5,7 +5,7 @@ function MobileNav() {
     <div>
       <Link
         to="/list"
-        className="text-sm font-semibold text-neutral-400 transition-colors hover:text-neutral-100"
+        className="text-sm font-semibold text-neutral-400 transition-colors hover:text-neutral-300 sm:text-base"
       >
         <span>Go to your List &gt;</span>
       </Link>

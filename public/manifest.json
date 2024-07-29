@@ -3,21 +3,21 @@
   "description": "Encourage people to take risks and do things they've always wanted but never did.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#111827",
-  "theme_color": "#111827",
+  "background_color": "#020617",
+  "theme_color": "#020617",
   "icons": [
     {
-      "src": "/icons8-logo-ios-17-outlined-16.png",
+      "src": "/icons8-old-vmware-logo-ios-17-outlined-16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "/icons8-logo-ios-17-outlined-180.png",
+      "src": "/icons8-old-vmware-logo-ios-17-outlined-180.png",
       "sizes": "180x180",
       "type": "image/png"
     },
     {
-      "src": "/icons8-logo-ios-17-outlined-192.png",
+      "src": "/icons8-old-vmware-logo-ios-17-outlined-192.png",
       "sizes": "192x192",
       "type": "image/png"
     }
