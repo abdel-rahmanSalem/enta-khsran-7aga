@@ -5,3 +5,7 @@
 .video-react .video-react-control-bar {
   display: none !important;
 }
+
+body {
+  overflow: hidden;
+}
