@@ -11,7 +11,7 @@ function AgrbWlaFaks({ isGrb, setIsGrb, setIsOpenVideo }) {
       onSubmit={handleSubmit}
       className="flex w-full flex-col gap-4"
     >
-      <li className="text-slate-300">
+      <li className="text-xs text-slate-300 sm:text-sm md:text-base">
         هنا هتكتب حاجه نفسك تعملها/تجربها بس مكسل
       </li>
       <input
