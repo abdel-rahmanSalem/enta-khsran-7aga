@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function MobileNav() {
+function NavLink() {
   return (
     <div>
       <Link
@@ -13,4 +13,4 @@ function MobileNav() {
   );
 }
 
-export default MobileNav;
+export default NavLink;

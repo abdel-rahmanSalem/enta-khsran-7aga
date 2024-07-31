@@ -6,12 +6,19 @@ function AgrbWlaFaks({ isGrb, setIsGrb, setIsOpenVideo }) {
     setIsGrb("");
   }
   return (
-    <form onSubmit={handleSubmit} className="flex w-full flex-col gap-4">
+    <form
+      dir="auto"
+      onSubmit={handleSubmit}
+      className="flex w-full flex-col gap-4"
+    >
+      <li className="text-slate-300">
+        هنا هتكتب حاجه نفسك تعملها/تجربها بس مكسل
+      </li>
       <input
-        dir="rtl"
+        dir="auto"
         id="tgroba"
         type="text"
-        placeholder="عاوز تجرب تعمل ايه...؟"
+        placeholder="3awz a3ml Operating System"
         value={isGrb}
         onChange={(e) => setIsGrb(e.target.value)}
         className="rounded-md border border-slate-200/5 bg-slate-950 p-3 text-gray-200 placeholder-gray-400 focus:border-sky-600 focus:outline-none focus:ring-1 focus:ring-sky-600"
@@ -19,7 +26,7 @@ function AgrbWlaFaks({ isGrb, setIsGrb, setIsOpenVideo }) {
       {isGrb.length > 3 && (
         <button
           type="submit"
-          className="w-full rounded-md bg-sky-600 px-4 py-2 text-white transition hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
+          className="w-full rounded-md bg-sky-700 px-4 py-2 text-white transition hover:bg-sky-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75"
         >
           أجرب ولا فاكس؟
         </button>
