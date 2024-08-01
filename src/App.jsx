@@ -23,7 +23,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <TgarbProvider>
-      <RouterProvider router={router} fallbackElement={<Loader />} />;
+      <RouterProvider router={router} fallbackElement={<Loader />} />
     </TgarbProvider>
   );
 }
