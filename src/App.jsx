@@ -3,6 +3,7 @@ import Loader from "./components/Loader";
 import Home from "./pages/Home";
 import List from "./pages/List";
 import PageLayout from "./layout/PageLayout";
+import { TgarbProvider } from "./contexts/TgarbProvider";
 
 const router = createBrowserRouter([
   {
@@ -20,7 +21,11 @@ const router = createBrowserRouter([
   },
 ]);
 function App() {
-  return <RouterProvider router={router} fallbackElement={<Loader />} />;
+  return (
+    <TgarbProvider>
+      <RouterProvider router={router} fallbackElement={<Loader />} />;
+    </TgarbProvider>
+  );
 }
 
 export default App;

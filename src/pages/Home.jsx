@@ -4,7 +4,7 @@ import MaTgrbYaAkhy from "../components/MaTgrbYaAkhy";
 import AgrbWlaFaks from "../components/AgrbWlaFaks";
 
 function MainHome() {
-  const [isGrb, setIsGrb] = useState("");
+  const [tgrobaTitle, setTgrobaTitle] = useState("");
   const [isOpenVideo, setIsOpenVideo] = useState(false);
   const videoRef = useRef(null);
 
@@ -25,8 +25,8 @@ function MainHome() {
         <MaTgrbYaAkhy videoRef={videoRef} isOpenVideo={isOpenVideo} />
         {!isOpenVideo && (
           <AgrbWlaFaks
-            isGrb={isGrb}
-            setIsGrb={setIsGrb}
+            tgrobaTitle={tgrobaTitle}
+            setTgrobaTitle={setTgrobaTitle}
             setIsOpenVideo={setIsOpenVideo}
           />
         )}
