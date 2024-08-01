@@ -18,7 +18,7 @@ function MainHome() {
   }, [isOpenVideo]);
 
   return (
-    <div className="fixed left-1/2 flex w-full -translate-x-1/2 justify-center px-6">
+    <div className="flex w-full justify-center">
       <div
         className={`w-full max-w-lg rounded-lg border border-slate-200/5 bg-slate-900 shadow-lg ${isOpenVideo ? "px-6 py-7" : "px-8 py-6"} shadow-md`}
       >

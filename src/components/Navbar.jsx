@@ -3,7 +3,7 @@ import NavLink from "../components/NavLink";
 
 function Navbar() {
   return (
-    <nav className="fixed top-6 flex w-screen items-center justify-between px-6">
+    <nav className="flex w-full items-center justify-between">
       <Logo />
       <NavLink />
     </nav>

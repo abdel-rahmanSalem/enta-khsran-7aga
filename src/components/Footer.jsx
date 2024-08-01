@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className="fixed bottom-6 left-6">
+    <div className="w-full">
       <span className="text-xs font-medium text-gray-400 sm:text-sm">
         &gt; BY{" "}
         <a
