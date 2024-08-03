@@ -20,7 +20,7 @@ function MainHome() {
   return (
     <div className="flex w-full flex-col items-center gap-8">
       <div
-        className={`w-full max-w-lg rounded-lg border border-slate-200/5 bg-slate-900 shadow-lg ${isOpenVideo ? "px-6 py-7" : "px-8 py-6"} shadow-md`}
+        className={`w-full max-w-lg rounded-lg border border-slate-200/5 bg-slate-900/20 shadow-lg ${isOpenVideo ? "px-6 py-7" : "px-8 py-6"}`}
       >
         <MaTgrbYaAkhy videoRef={videoRef} isOpenVideo={isOpenVideo} />
         {!isOpenVideo && (
