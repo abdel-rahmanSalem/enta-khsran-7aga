@@ -2,7 +2,8 @@ import useTgarb from "../contexts/useTgarb";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
-import { filters } from "../constants/data";
+import { progressStatus as filters } from "../constants/data";
+import Tgroba from "../components/Tgroba";
 
 function List() {
   const { tgarb } = useTgarb();
@@ -29,7 +30,7 @@ function List() {
   }
 
   return (
-    <div className="h-full w-11/12 py-14">
+    <div className="w-11/12 overflow-hidden py-14">
       <div className="flex items-center justify-between">
         <h1 className="font-bold uppercase tracking-[5px] text-slate-50/90 sm:text-2xl">
           My List of Risks
@@ -63,15 +64,15 @@ function List() {
           <div className="flex gap-2 pb-1">
             {filters.map((filter) => (
               <button
-                key={filter.name}
-                onClick={() => handleFilterClick(filter.name)}
+                key={filter.status}
+                onClick={() => handleFilterClick(filter.status)}
                 className={`rounded-md border px-2 py-1 text-sm capitalize sm:text-base ${
-                  filter.name === curFilter
+                  filter.status === curFilter
                     ? filter.selectedStyle
                     : filter.style
                 } transition-colors duration-200`}
               >
-                {filter.name}
+                {filter.status}
               </button>
             ))}
           </div>
@@ -108,38 +109,17 @@ function List() {
           </div>
         )}
         {tgarb.length > 0 && (
-          <ul className="mt-8 flex flex-col gap-2">
-            <li className="relative flex flex-col gap-1 rounded-md border border-slate-200/5 bg-slate-950/30 p-3">
-              <span className="absolute flex h-4 w-4 items-center justify-center rounded-full border-2 border-yellow-600">
-                <span className="absolute h-2 w-2 rounded-full border border-yellow-600 bg-yellow-600"></span>
-              </span>
-              <button className="absolute right-3 flex flex-col gap-[1px]">
-                <span className="h-1 w-1 rounded-full bg-slate-500/50 sm:h-[5px] sm:w-[5px]"></span>
-                <span className="h-1 w-1 rounded-full bg-slate-500/50 sm:h-[5px] sm:w-[5px]"></span>
-                <span className="h-1 w-1 rounded-full bg-slate-500/50 sm:h-[5px] sm:w-[5px]"></span>
-              </button>
-              <div className="px-6">
-                <h2 className="text-sm text-slate-50/90 sm:text-base">
-                  3awz A3ml Operating System
-                </h2>
-                <p className="text-xs text-slate-400/50 sm:text-sm">
-                  2024 Aug 04
-                </p>
-                <div className="no-scrollbar lg:scrollbar mt-2 flex gap-2 overflow-x-auto pb-1">
-                  {["important", "college", "new", "any"].map((label) => (
-                    <span
-                      key={label}
-                      className="rounded-md border border-slate-500/50 bg-sky-900/40 px-2 py-1 text-xs capitalize text-slate-50/80"
-                    >
-                      {label}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <button className="self-end text-sm font-bold text-slate-100/50 hover:text-slate-100/80">
-                Done?
-              </button>
-            </li>
+          <ul className="my-8 flex h-4/6 flex-col gap-2 overflow-y-scroll sm:h-5/6">
+            {tgarb.map((tgroba) => (
+              <Tgroba
+                title={tgroba.title}
+                date={tgroba.date}
+                statusIndex={tgroba.statusIndex}
+                labels={tgroba.labels}
+                id={tgroba.id}
+                key={tgroba.id}
+              />
+            ))}
           </ul>
         )}
       </div>

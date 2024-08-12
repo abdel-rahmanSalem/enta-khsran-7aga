@@ -1,5 +1,6 @@
 import { createContext } from "react";
 import { useEffect, useState } from "react";
+import { useEffectAfterMount } from "../hooks/useEffectAfterMount";
 
 const TgarbContext = createContext();
 
@@ -19,15 +20,20 @@ function TgarbProvider({ children }) {
     }
   }, []);
 
-  useEffect(() => {
-    if (tgarb.length > 0) {
-      console.log(tgarb);
-      console.log("State is not embty");
-      localStorage.setItem("tgarb", JSON.stringify(tgarb));
-    } else {
-      console.log("State is embty");
-    }
+  // useEffect(() => {
+  //   if (tgarb.length > 0) {
+  //     console.log(tgarb);
+  //     console.log("State is not embty");
+  //     localStorage.setItem("tgarb", JSON.stringify(tgarb));
+  //   } else {
+  //     console.log("State is embty");
+  //   }
+  // }, [tgarb]);
+
+  useEffectAfterMount(() => {
+    localStorage.setItem("tgarb", JSON.stringify(tgarb));
   }, [tgarb]);
+
   return (
     <TgarbContext.Provider value={{ tgarb, setTgarb }}>
       {children}

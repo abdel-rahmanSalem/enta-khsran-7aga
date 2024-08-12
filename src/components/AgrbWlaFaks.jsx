@@ -7,7 +7,16 @@ function AgrbWlaFaks({ tgrobaTitle, setTgrobaTitle, setIsOpenVideo }) {
     e.preventDefault();
     if (tgrobaTitle.length < 4) return;
     const formattedDate = formatDate(new Date());
-    setTgarb((cur) => [...cur, { title: tgrobaTitle, date: formattedDate }]);
+    setTgarb((cur) => [
+      ...cur,
+      {
+        title: tgrobaTitle,
+        date: formattedDate,
+        statusIndex: 0,
+        labels: ["normal"],
+        id: new Date(),
+      },
+    ]);
     setIsOpenVideo(true);
     setTgrobaTitle("");
   }
@@ -17,9 +26,11 @@ function AgrbWlaFaks({ tgrobaTitle, setTgrobaTitle, setIsOpenVideo }) {
       onSubmit={handleSubmit}
       className="flex w-full flex-col gap-4"
     >
-      <li className="text-xs text-slate-300 sm:text-sm md:text-base">
-        هنا هتكتب حاجه نفسك تعملها/تجربها بس مكسل
-      </li>
+      <ul>
+        <li className="text-xs text-slate-300 sm:text-sm md:text-base">
+          هنا هتكتب حاجه نفسك تعملها/تجربها بس مكسل
+        </li>
+      </ul>
       <input
         dir="auto"
         id="tgroba"
